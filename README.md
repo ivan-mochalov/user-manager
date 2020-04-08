@@ -1,1 +1,3 @@
-# user-manager
+# User Manager
+
+Trial java application 

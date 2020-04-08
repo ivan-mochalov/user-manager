@@ -1,0 +1,10 @@
+<server description="user manager server">
+    <featureManager>
+        <feature>mpHealth-2.1</feature>
+    </featureManager>
+
+    <applicationManager autoExpand="true"/>
+
+    <httpEndpoint host="*" httpPort="9080" httpsPort="9443" id="defaultHttpEndpoint"/>
+    <webApplication id="user-manager" location="user-manager.war" contextRoot="/"/>
+</server>
