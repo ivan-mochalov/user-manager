@@ -17,7 +17,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <version.liberty-maven-plugin>3.1</version.liberty-maven-plugin>
-        <final.name>${project.artifactId}</final.name>
+        <server.name>${project.artifactId}</server.name>
     </properties>
 
     <dependencies>
@@ -31,14 +31,14 @@
     </dependencies>
 
     <build>
-        <finalName>${final.name}</finalName>
+        <finalName>${server.name}</finalName>
         <plugins>
             <plugin>
                 <groupId>io.openliberty.tools</groupId>
                 <artifactId>liberty-maven-plugin</artifactId>
                 <version>${version.liberty-maven-plugin}</version>
                 <configuration>
-                    <serverName>${final.name}</serverName>
+                    <serverName>${server.name}</serverName>
                 </configuration>
             </plugin>
         </plugins>

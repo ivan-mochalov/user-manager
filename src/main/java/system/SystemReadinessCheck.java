@@ -12,10 +12,12 @@ import javax.enterprise.context.ApplicationScoped;
 
 @Readiness
 @ApplicationScoped
-public class Health implements HealthCheck {
+public class SystemReadinessCheck implements HealthCheck {
+    private static final String SERVER_NAME = System.getProperty("wlp.server.name");
+
     @Override
     public HealthCheckResponse call() {
-        return HealthCheckResponse.named(Health.class.getSimpleName())
-                .withData("services", "available").up().build();
+        return HealthCheckResponse.named(SystemReadinessCheck.class.getSimpleName())
+                .withData(SERVER_NAME, "available").up().build();
     }
 }
